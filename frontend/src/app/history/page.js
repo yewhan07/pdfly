@@ -9,7 +9,8 @@ import {
   TableRow,
 } from "@/components/ui/table"
 import { Button } from "@/components/ui/button"
-import { Download } from "lucide-react"
+import { Download, ArrowLeft } from "lucide-react"
+import Link from "next/link"
 
 // Mock data - will be replaced with real data from API
 const mockUploads = [
@@ -32,7 +33,15 @@ const mockUploads = [
 export default function HistoryPage() {
   return (
     <div className="container mx-auto py-10 px-4">
-      <h1 className="text-3xl font-bold mb-8">Upload History</h1>
+      <div className="mb-6">
+        <Link href="/">
+          <Button variant="ghost" size="sm" className="mb-4">
+            <ArrowLeft className="h-4 w-4 mr-2" />
+            Back to Upload
+          </Button>
+        </Link>
+        <h1 className="text-3xl font-bold">Upload History</h1>
+      </div>
       
       <div className="rounded-md border">
         <Table>
