@@ -31,8 +31,8 @@ export default function AuthPage() {
             Enter your credentials to access your account
           </p>
         </CardHeader>
-        <CardContent>
-          <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit}>
+          <CardContent>
             <div className="space-y-4">
               <div className="space-y-2">
                 <Label htmlFor="email">Email</Label>
@@ -43,16 +43,16 @@ export default function AuthPage() {
                 <Input id="password" type="password" required />
               </div>
             </div>
-        </CardContent>
-        <CardFooter>
-          <Button 
-            className="w-full" 
-            type="submit"
-            disabled={isLoading}
-          >
-            {isLoading ? "Signing in..." : "Sign in"}
-          </Button>
-        </CardFooter>
+          </CardContent>
+          <CardFooter>
+            <Button 
+              className="w-full" 
+              type="submit"
+              disabled={isLoading}
+            >
+              {isLoading ? "Signing in..." : "Sign in"}
+            </Button>
+          </CardFooter>
         </form>
       </Card>
     </div>
